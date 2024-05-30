@@ -37,3 +37,20 @@ Este es un proyecto desarrollado en Node.js (versión 20.5.0) que permite la ges
 
 - Desarrollo: `npm run dev`
 - Producción: `npm run start`
+
+
+## Rutas de acceso
+
+### Ruta Paciente 
+
+-   Listar todos los pacientes: http://localhost:${PORT}/patients/  ->GET
+-   Buscar paciente por id: http://localhost:${PORT}/patients/byID ->POST
+    Datos:{patientID: 'Id del cliente'}
+-   Crear paciente: http://localhost:${PORT}/patients  ->POST
+    Datos:{code: '', name '', description: '', risk: ''}
+
+### Ruta Riesgos Oncológicos 
+
+-   Listar todos los pacientes: http://localhost:${PORT}/patients/  ->GET
+-   Buscar paciente por id: http://localhost:${PORT}/patients/byID ->POST
+-   Crear paciente: http://localhost:${PORT}/risks  ->POST
