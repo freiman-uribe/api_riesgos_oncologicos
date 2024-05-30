@@ -41,16 +41,60 @@ Este es un proyecto desarrollado en Node.js (versión 20.5.0) que permite la ges
 
 ## Rutas de acceso
 
+## Rutas de acceso
+
 ### Ruta Paciente 
 
 -   Listar todos los pacientes: http://localhost:${PORT}/patients/  ->GET
--   Buscar paciente por id: http://localhost:${PORT}/patients/byID ->POST
-    Datos:{patientID: 'Id del cliente'}
--   Crear paciente: http://localhost:${PORT}/patients  ->POST
-    Datos:{code: '', name '', description: '', risk: ''}
 
+-   Buscar paciente por id: http://localhost:${PORT}/patients/byID ->POST
+    * Datos:{
+        "patientID": ""
+    }
+
+-   Crear paciente: http://localhost:${PORT}/patients  ->POST
+    * Datos:{
+        "code": "",
+        "name": "",
+        "description": "",
+        "risk": ""
+    }
+ 
 ### Ruta Riesgos Oncológicos 
 
--   Listar todos los pacientes: http://localhost:${PORT}/patients/  ->GET
--   Buscar paciente por id: http://localhost:${PORT}/patients/byID ->POST
--   Crear paciente: http://localhost:${PORT}/risks  ->POST
+-   Listar todos los riesgos oncológicos: http://localhost:${PORT}/risks  ->GET
+
+
+-   Buscar riesgo oncológico por id: http://localhost:${PORT}/risks/byID ->POST
+    * Datos: { 
+        "riskI": ""
+    }
+
+-   Buscar riesgo oncológico por id del paciente: http://localhost:${PORT}/risks/riskPatient ->POST
+    * Datos: { 
+        "patientID": "" 
+    }
+
+-   Crear riesgo oncológico: http://localhost:${PORT}/risks  ->POST
+    * Datos: {
+            "typeRisk": "",
+            "patientId": "",
+            "riskFactor": "",
+            "resultsTest": "",
+            "description": ""
+        }
+
+-   Actualizacion riesgo oncológico: http://localhost:${PORT}/risks  ->PUT
+    * Datos: {
+           "riskId": "",
+           "typeRisk": "",
+           "patientId": "",
+           "riskFactor": "",
+           "resultsTest": "",
+           "description": ""
+        }
+
+-   Eliminar riesgo oncológico: http://localhost:${PORT}/risks  -> DELETE
+    * Datos: {
+           "riskId": ""
+        }
